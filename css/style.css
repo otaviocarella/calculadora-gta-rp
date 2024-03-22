@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --black: #1d1d1d;
+    --gray: #2b2b2b;
+    --lightgray: #5a5a5a;
+    --bgGray: #5a5a5a7e;
+    --bgGreen: #61ff316e;
+    --borderGreen: #61ff31;
+    --bgRed: #ff31316e;
+    --borderRed: #ff3131;
+    --white: #fff;
+}
+
+html,
+body {
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---------------------------------------------- */
+
+#light1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 0, 255, 0.5) 0%, rgba(0, 0, 255, 0) 80%);
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+#light2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 80%);
+    border-radius: 50%;
+    animation: blink 1s infinite;
+    animation-delay: 0.2s;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ---------------------------------------------- */
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+main section.content {
+    width: 84%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main section.content>h2 {
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+main section.content div.box {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+main section.content div.box div.flex {
+    justify-content: space-between;
+}
+
+main section.content div.box div.penalCodes {
+    width: calc(100% / 2 - 10px);
+    height: 472px;
+    overflow: auto;
+    padding: 10px;
+    background-color: var(--gray);
+    border-radius: 5px;
+}
+
+main section.content div.box div.penalCodes>h2 {
+    font-size: 14px;
+    color: var(--lightgray);
+}
+
+main section.content div.box div.penalCodes>h2::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    background-color: var(--lightgray);
+    display: block;
+}
+
+main section.content div.box div.penalCodes table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+main section.content div.box div.penalCodes table th,
+main section.content div.box div.penalCodes table td {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--lightgray);
+    color: var(--white);
+    text-align: center;
+}
+
+main section.content div.box div.penalCodes table th {
+    background-color: var(--black);
+    font-weight: bold;
+}
+
+main section.content div.box div.penalCodes table td button {
+    background-color: var(--bgGray);
+    border: 2px solid var(--lightgray);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+main section.content div.box div.penalCodes table td button:hover {
+    background-color: var(--bgGreen);
+    border: 2px solid var(--borderGreen);
+}
+
+main section.content div.box div.previewPenalCodes {
+    width: calc(100% / 2 - 10px);
+    height: 472px;
+    overflow: auto;
+    padding: 10px;
+    background-color: var(--gray);
+    border-radius: 5px;
+}
+
+main section.content div.box div.previewPenalCodes div.flex {
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--lightgray);
+}
+
+main section.content div.box div.previewPenalCodes div.flex h2 {
+    font-size: 14px;
+    color: var(--lightgray);
+}
+
+main section.content div.box div.previewPenalCodes div.flex button {
+    color: var(--white);
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: color 0.5s linear;
+}
+
+main section.content div.box div.previewPenalCodes div.flex button:hover {
+    color: var(--borderRed);
+}
+
+main section.content div.box div.previewPenalCodes table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+main section.content div.box div.previewPenalCodes table th,
+main section.content div.box div.previewPenalCodes table td {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--lightgray);
+    color: var(--white);
+    text-align: center;
+}
+
+main section.content div.box div.previewPenalCodes table th {
+    background-color: var(--black);
+    font-weight: bold;
+}
+
+main section.content div.box div.previewPenalCodes table td button {
+    background-color: var(--bgGray);
+    border: 2px solid var(--lightgray);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+main section.content div.box div.previewPenalCodes table td button:hover {
+    background-color: var(--bgRed);
+    border: 2px solid var(--borderRed);
+}
+
+/* ---------------------------------------------- */
+
+main section.content div.resultPenalCodes {
+    width: 100%;
+}
+
+main section.content div.resultPenalCodes div.flex {
+    justify-content: space-between;
+}
+
+main section.content div.resultPenalCodes div.prision,
+main section.content div.resultPenalCodes div.fine,
+main section.content div.resultPenalCodes div.bail {
+    width: calc(100% / 3 - 20px);
+}
+
+main section.content div.resultPenalCodes div.prision label,
+main section.content div.resultPenalCodes div.fine label,
+main section.content div.resultPenalCodes div.bail label {
+    color: var(--white);
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+main section.content div.resultPenalCodes div.prision input,
+main section.content div.resultPenalCodes div.fine input,
+main section.content div.resultPenalCodes div.bail input {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+}
+
+main section.content div.resultPenalCodes div.prision input::placeholder,
+main section.content div.resultPenalCodes div.fine input::placeholder,
+main section.content div.resultPenalCodes div.bail input::placeholder {
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    main section.content {
+        width: 98%;
+    }
+
+    main section.content div.box div.penalCodes table,
+    main section.content div.box div.previewPenalCodes table,
+    main section.content div.box div.previewPenalCodes div.flex,
+    main section.content div.box div.penalCodes>h2::after {
+        width: 150%;
+    }
+
+    main section.content div.resultPenalCodes {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main section.content {
+        width: 90%;
+        height: 80vh;
+        overflow: auto;
+    }
+
+    main section.content>h2 {
+        font-size: 25px;
+        position: absolute;
+        top: 30px;
+    }
+
+    main section.content div.box div.penalCodes {
+        width: 100%;
+        height: 400px;
+        margin-top: 210px;
+        margin-bottom: 20px;
+    }
+
+    main section.content div.box div.previewPenalCodes {
+        width: 100%;
+        height: 400px;
+    }
+
+    main section.content div.box div.penalCodes table,
+    main section.content div.box div.previewPenalCodes table,
+    main section.content div.box div.previewPenalCodes div.flex,
+    main section.content div.box div.penalCodes>h2::after {
+        width: 100%;
+    }
+
+    main section.content div.resultPenalCodes {
+        margin-top: 340px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main section.content {
+        width: 100%;
+    }
+
+    main section.content div.box div.penalCodes table,
+    main section.content div.box div.previewPenalCodes table,
+    main section.content div.box div.previewPenalCodes div.flex,
+    main section.content div.box div.penalCodes>h2::after {
+        width: 120%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    main section.content div.box div.penalCodes table,
+    main section.content div.box div.previewPenalCodes table,
+    main section.content div.box div.previewPenalCodes div.flex,
+    main section.content div.box div.penalCodes>h2::after {
+        width: 140%;
+    }
+
+    main section.content div.resultPenalCodes div.prision,
+    main section.content div.resultPenalCodes div.fine,
+    main section.content div.resultPenalCodes div.bail {
+        width: calc(100% / 3 - 5px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    main section.content div.box div.penalCodes table,
+    main section.content div.box div.previewPenalCodes table,
+    main section.content div.box div.previewPenalCodes div.flex,
+    main section.content div.box div.penalCodes>h2::after {
+        width: 205%;
+    }
+}

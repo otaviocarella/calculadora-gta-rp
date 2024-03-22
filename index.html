@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/script.js" defer></script>
+        <title>Calculadora Penal (GTA RP)</title>
+    </head>
+    <body>
+
+        <div id="light1"></div>
+        <div id="light2"></div>
+
+        <main>
+            <section class="content">
+                <h2>Calculadora Penal (GTA RP)</h2>
+                <div class="box">
+                    <div class="flex">
+                        <div class="penalCodes">
+                            <h2>Códigos penais</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Artigos</th>
+                                        <th>Crimes / Delitos / Infrações</th>
+                                        <th>Pena</th>
+                                        <th>Multa</th>
+                                        <th>Fiança</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyTable">
+                                </tbody>
+                            </table>
+                        </div><!--penalCodes-->
+                        <div class="previewPenalCodes">
+                            <div class="flex">
+                                <h2>Adicionados</h2>
+                                <button id="clearButton">Limpar Tudo</button>
+                            </div><!--flex-->
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Artigos</th>
+                                        <th>Crimes / Delitos / Infrações</th>
+                                        <th>Pena</th>
+                                        <th>Multa</th>
+                                        <th>Fiança</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyTablePreview">
+                                </tbody>
+                            </table>
+                        </div><!--previewPenalCodes-->
+                    </div><!--flex-->
+                </div><!--box-->
+                <div class="resultPenalCodes">
+                    <div class="flex">
+                        <div class="prision">
+                            <label for="resultPrision">Pena total</label>
+                            <input type="text" id="resultPrision" placeholder
+                                disabled>
+                        </div><!--prision-->
+
+                        <div class="fine">
+                            <label for="resultFine">Multa total</label>
+                            <input type="text" id="resultFine" placeholder
+                                disabled>
+                        </div><!--fine-->
+
+                        <div class="bail">
+                            <label for="resultBail">Fiança total</label>
+                            <input type="text" id="resultBail" placeholder
+                                disabled>
+                        </div><!--bail-->
+                    </div><!--flex-->
+                </div><!--resultPenalCodes-->
+            </section><!--content-->
+        </main>
+
+    </body>
+</html>
